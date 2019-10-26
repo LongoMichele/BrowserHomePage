@@ -3,32 +3,34 @@
 <head>
 	<meta charset='utf-8'>
 	<link rel='stylesheet' href='./list.css'>
+	<link rel='stylesheet' href='../res/font-awesome/css/font-awesome.min.css'>
 	<script type='text/javascript' src='./list.js'></script>
 </head>
 
-<body style='position: absolute; width: 50%; left: 25%;'>
+<body>
 	<ul style='margin-left: -35px; margin-top: 5px;'>
-		<li id='UniFe' class='first' onclick='showChild("UniFe")'> UniFe
+		<li id='UniFe' class='first folderClosed' onclick='showChild("UniFe")' style='display:inline-block'>UniFe
 			<ul>
-				<li id='Informatica' onclick='showChild("Informatica")'> Informatica
+				<li id='Informatica' class='folderClosed' onclick='showChild("Informatica")'>Informatica
 					<ul>
-						<li><a href='http://unife.it/scienze/informatica'> Home</a></li>
-						<li class='last'><a
-								href='http://www.unife.it/scienze/informatica/studiare/programmi-insegnamenti-docenti/piano-degli-studi-270-ord-2016-aa2019-20'>
-								Corsi</a></li>
+						<li class='link'><a href='http://unife.it/scienze/informatica'>Home</a></li>
+						<li class='last link'><a
+								href='http://www.unife.it/scienze/informatica/studiare/programmi-insegnamenti-docenti/piano-degli-studi-270-ord-2016-aa2019-20'>Corsi</a>
+						</li>
 					</ul>
 				</li>
-				<li class='last'><a href='http://studiare.unife.it/'> Area Personale</a></li>
+				<li class='last link'><a href='http://studiare.unife.it/'>Area Personale</a>
+				</li>
 			</ul>
 		</li>
-		<li id='Reddit' onclick='showChild("Reddit")'> Reddit
+		<li id='Reddit' class='folderClosed' onclick='showChild("Reddit")'>Reddit
 			<ul>
-				<li><a href='https://www.reddit.com'> reddit.com</a></li>
-				<li><a href='https://www.reddit.com/r/wallpapers/'> r/wallpapers</a></li>
+				<li class='link'><a href='https://www.reddit.com'>reddit.com</a></li>
+				<li class='last link'><a href='https://www.reddit.com/r/wallpapers/'>r/wallpapers</a></li>
 			</ul>
 		</li>
-		<li><a href='https://www.youtube.com'> YouTube</a></li>
-		<li class='last'><a href='https://github.com/'> GitHub</a></li>
+		<li class='link'><a href='https://www.youtube.com'>YouTube</a></li>
+		<li class='last link'><a href='https://github.com/'>GitHub</a></li>
 	</ul>
 </body>
 
