@@ -13,9 +13,7 @@
 			}
 		}
 
-		$separator = '|';
 		$file = fopen('../res/quotes.txt', 'w');
-		fwrite($file, $separator);
 		for($i = 0; $i < count($quotes); $i++) {
 			$s = $quotes[$i][0] . $separator . $quotes[$i][1];
 			fwrite($file, "\n" . $s);
@@ -26,7 +24,6 @@
 	function readLines() {
 		$quotes = array();
 		$file = fopen('../res/quotes.txt','r');
-		$separator = fgets($file);
 		while(!feof($file)) {
 			array_push($quotes, fgets($file));
 		}
@@ -37,9 +34,8 @@
 			$line = readLines();
 		}
 		else {
-			$x = rand(1, count($quotes)-1);
+			$x = rand(0, count($quotes)-1);
 			$file = fopen('../res/quotes.txt','w');
-			fwrite($file, $separator);
 			for($i = 0; $i < count($quotes) && !feof($file); $i++) {
 				if($i == $x) {
 					$line = $quotes[$i];

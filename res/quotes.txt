@@ -2,7 +2,6 @@
 Simplicity is prerequisite for reliability.|Edsger W. Dijkstra
 The computing scientist’s main challenge is not to get confused by the complexities of his own making.|Edsger W. Dijkstra
 If debugging is the process of removing software bugs, then programming must be the process of putting them in.|Edsger W. Dijkstra
-The best minds of my generation are thinking about how to make people click ads.|Jeff Hammerbacher
 The tools we use have a profound and devious influence on our thinking habits, and therefore on our thinking abilities.|Edsger W. Dijkstra
 Adding manpower to a late software project makes it later.|Fred Brooks
 Nine women can't make a baby in one month.|Fred Brooks
@@ -44,7 +43,6 @@ The most important single aspect of software development is to be clear about wh
 The only sin is to make a choice without knowing you are making one.|Jonathan Shewchuk
 So much complexity in software comes from trying to make one thing do two things.|Ryan Singer
 Hofstadter's Law: It always takes longer than you expect, even when you take into account Hofstadter's Law.|P. J. Plauger
-First, solve the problem. Then, write the code.|John Johnson
 A good programmer is someone who looks both ways before crossing a one-way street.|Doug Linder
 Compatibility means deliberately repeating other people’s mistakes.|David Wheeler (computer scientist)
 There are two major products that come out of Berkeley: LSD and UNIX. We don't believe this to be a coincidence.|Jeremy S. Anderson
@@ -98,7 +96,6 @@ Dealing with failure is easy: Work hard to improve.|Alan Perlis
 A programming language is low level when its programs require attention to the irrelevant.|Alan Perlis
 Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.|Alan Perlis
 Programs must be written for people to read, and only incidentally for machines to execute.|Hal Abelson
-When we don’t understand a process, we fall into magical thinking about results.|Jef Raskin
 Low-level programming is good for the programmer’s soul.|John Carmack
 A user interface should be so simple that a beginner in an emergency can understand it within 10 seconds.|Ted Nelson
 Every program has (at least) two purposes: the one for which it was written and another for which it wasn't.|Alan Perlis
@@ -120,7 +117,6 @@ Good people with a good process will outperform good people with no process ever
 The entire history of software engineering is that of the rise in levels of abstraction.|Grady Booch
 The purpose of computing is insight, not numbers.|Richard Hamming
 Any sufficiently advanced technology is indistinguishable from magic.|Arthur C. Clarke
-All too many of our software systems are, architecturally, little more than shantytowns.|Joseph Yoder (computer scientist)
 Sadly, architecture has been undervalued for so long that many engineers regard life with a Big Ball of Mud as normal.|Joseph Yoder (computer scientist)
 The real problem with throwaway code comes when it isn't thrown away.|Joseph Yoder (computer scientist)
 Sometimes it’s just easier to throw a system away, and start over.|Joseph Yoder (computer scientist)
@@ -187,8 +183,6 @@ The best way to know that you have found the last bug is never to find the first
 The only way for errors to occur in a program is by being put there by the author. No other mechanisms are known.|Harlan Mills
 Reliable computations are obtainable from buggy programs, which after all, are the only kind of programs there are.|Daniel T. Barry
 I can build a reliable system with thousands of bugs, if you let me choose my bugs carefully.|David Parnas
-Ed Adams of IBM found that 80% of the reliability problems are caused by only 2% of the defects.|Daniel T. Barry
-Any technological or managerial scheme to force documentation can be subverted by unwilling programmers.|Daniel T. Barry
 Good judgement comes from experience. Experience comes from bad judgement.|Jim Horning
 Machines as simple as thermostats can be said to have beliefs.|John McCarthy (computer scientist)
 Typing is no substitute for thinking.|Richard Hamming
@@ -220,7 +214,6 @@ Every now and then I feel a temptation to design a programming language but then
 The more varieties of different kinds of notations are still useful — don’t only read the people who code like you.|Donald Knuth
 Making things easy is hard.|Ted Nelson
 The difference between theory and practice is that in theory, there is no difference between theory and practice.|Richard Moore (engineer)
-You should name a variable using the same care with which you name a first-born child.|Jim Coplien
 There's nothing more permanent than a temporary hack.|Kyle Simpson
 As numbers are reduced to the simplest principles, like 0 and 1, a wonderful order is apparent throughout.|Gottfried Wilhelm Leibniz
 In my second year in graduate school, I took a computer course and that was like lightening striking.|Ted Nelson
@@ -238,7 +231,6 @@ Computer languages of the future will be more concerned with goals and less with
 A computer would deserve to be called intelligent if it could deceive a human into believing that it was human.|Alan Turing
 The way to arrest entropy in software is to refactor it.|Joseph Yoder (computer scientist)
 JavaScript is the only language that I'm aware of that people feel they don't need to learn before they start using it.|Douglas Crockford
-Be humble, communicate clearly, and respect others. It costs nothing to be kind, but the impact is priceless.|Addy Osmani
 Telling a programmer there's already a library to do X is like telling a songwriter there's already a song about love.|Pete Cordell
 Should array indices start at 0 or 1? My compromise of 0.5 was rejected without, I thought, proper consideration.|Stan Kelly-Bootle
 Sometimes, the elegant implementation is a function. Not a method. Not a class. Not a framework. Just a function.|John Carmack
@@ -251,7 +243,6 @@ Most errors are introduced during requirements specification!|Daniel T. Barry
 Programming is similar to a game of golf. The point is not getting the ball in the hole but how many strokes it takes.|Harlan Mills
 A number of studies have shown testing not very effective at finding bugs.|Daniel T. Barry
 The key to keeping software costs down is to write code that is easily modified.|Daniel T. Barry
-Programming is at least as difficult as developing a mathematical theory.|Daniel T. Barry
 By June 1949 people had begun to realize that it was not so easy to get programs right as at one time appeared.|Maurice Wilkes
 Everything should be made as simple as possible. But to do that you have to master complexity.|Butler Lampson
 If I had followed my heart instead of advice, dBASE would be much closer to perfection today.|Wayne Ratliff
