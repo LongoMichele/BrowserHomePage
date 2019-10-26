@@ -1,0 +1,38 @@
+body {
+	background-color: #323639;
+	overflow: hidden;
+	font-size: 20;
+	color: rgb(250, 250, 250);
+	font-family: 'Hack';
+	user-select: none;
+}
+ul {
+	list-style-type: none;
+	color: #2186D1;
+	margin-left: -15px;
+}
+ul li:before {
+	content: '\251C';
+	color: rgb(250, 250, 250);
+}
+
+ul li.first:before {
+	content: '\250C';
+}
+
+ul li.last:before {
+	content: '\2514';
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #8EDFFF;
+}
+
+a:hover {
+	color: red;
+}
+
+ul li ul {
+	display: none;
+}

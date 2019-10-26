@@ -1,46 +1,36 @@
 <html>
-	<head>
-		<meta charset='utf-8'>
-		<link rel="stylesheet" href="./lists.css">
-		<!-- <link rel="stylesheet" href="/home/michele/MyProjects/BrowserHomePage/other/phil/style.css"> -->
-	</head>
-	<body>
-		<ul>
-			<li id='first'>
-				1
-			</li>
-			<li>
-				1
-			</li>
+
+<head>
+	<meta charset='utf-8'>
+	<link rel='stylesheet' href='./list.css'>
+	<script type='text/javascript' src='./list.js'></script>
+</head>
+
+<body style='position: absolute; width: 50%; left: 25%;'>
+	<ul style='margin-left: -35px; margin-top: 5px;'>
+		<li id='UniFe' class='first' onclick='showChild("UniFe")'> UniFe
 			<ul>
-				<li>
-					1
+				<li id='Informatica' onclick='showChild("Informatica")'> Informatica
+					<ul>
+						<li><a href='http://unife.it/scienze/informatica'> Home</a></li>
+						<li class='last'><a
+								href='http://www.unife.it/scienze/informatica/studiare/programmi-insegnamenti-docenti/piano-degli-studi-270-ord-2016-aa2019-20'>
+								Corsi</a></li>
+					</ul>
 				</li>
-				<li>
-					1
-				</li>
-				<li>
-					1
-				</li>
-				<li id='last'>
-					1
-				</li>
+				<li class='last'><a href='http://studiare.unife.it/'> Area Personale</a></li>
 			</ul>
-			<li>
-				1
-			</li>
-			<li>
-				1
-			</li>
-			<li>
-				1
-			</li>
-			<li>
-				1
-			</li>
-			<li id='last'>
-				1
-			</li>
-		</ul>
-	</body>
+		</li>
+		<li id='Reddit' onclick='showChild("Reddit")'> Reddit
+			<ul>
+				<li><a href='https://www.reddit.com'> reddit.com</a></li>
+				<li><a href='https://www.reddit.com/r/italy'> r/Italy</a></li>
+				<li class='last'><a href='https://www.reddit.com/r/italyinformatica'> r/ItalyInformatica</a></li>
+			</ul>
+		</li>
+		<li><a href='https://www.youtube.com'> YouTube</a></li>
+		<li class='last'><a href='https://www.amazon.it'> Amazon.it</a></li>
+	</ul>
+</body>
+
 </html>
