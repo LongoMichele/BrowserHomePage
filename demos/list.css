@@ -82,7 +82,7 @@ ul li.last.link:before {
 
 }
 
-a:link, a:visited {
+a, a:link, a:visited {
 	text-decoration: none;
 	color: #8EDFFF;
 }
