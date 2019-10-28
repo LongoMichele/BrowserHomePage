@@ -3,6 +3,7 @@
 		$url = 'https://programming-quotes-api.herokuapp.com/quotes/lang/en';
 		$json = json_decode(file_get_contents($url));
 
+		$separator = '|';
 		$quotes = array();
 		for($i = 1; $i < count($json); $i++) {
 			if(strlen($json[$i]->en) <= 120) {

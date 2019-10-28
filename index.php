@@ -194,9 +194,10 @@
 		return [$forecast, $sunrise, $sunset];
 	}
 ?>
-
-
-<html lang='en' style='overflow: hidden;'>
+<!--#######################################################################################################################-->
+<!--#HTML##################################################################################################################-->
+<!--#######################################################################################################################-->
+<html lang='en' style='background-color: #323639;'>
 	<head>
 		<title>Home</title>
 		<meta charset='utf-8'>
@@ -216,9 +217,9 @@
 				$sunrise = $res[1];
 				$sunset = $res[2];
 
-				echo '<div id="showForecast" onclick="showForecast()">';
-				// echo '<img src="../icons/125/sample.png" style="float: left;">';
-				echo '<img src="../icons/125' . $forecast[0][0]['icon'] . '" style="float: left;">';
+				echo '<div class="showForecast" id="showForecast" onclick="showForecast()">';
+				// ' . $forecast[0][0]['icon'] . '
+				echo '<img src="../icons/125/sample.png" style="float: left;">';
 				echo '<span style="font-size: 60; position: relative; left: 10px; top: -10px;">' . $forecast[0][0]['temp'] . '</span><br>';
 
 				echo '<img class="sunIcon" src="../icons/50/sunrise.png">';
@@ -232,21 +233,41 @@
 				echo '<span class="otherText">' . $forecast[0][0]['wind'] . '</span><br>';
 				echo '</div>';
 
-				echo '<div id="forecast" style="display: none;">';
+				echo '<div id="forecast" class="forecast">';
 				for($i = 1; $i < count($forecast[1]); $i++) {
-					echo '<div style="position: relative; clear: left; bottom: ' . ($i-1)*15 . 'px;">';
-					echo '<div style="font-size: 40; margin-top: 20px; float: left;">At ' . $forecast[1][$i]['time'] . '<br>';
-					echo '<span style="font-size: 20;">' . $forecast[1][$i]['weather'] . '</span></div><br>';
+					echo '<div style="clear: left; position: relative; top: ' . -($i-1)*15 . ';">';
+					echo '<div class="onLeft" style="font-size: 40;">At ' . $forecast[1][$i]['time'] . '<br>';
+					echo '<span class="forecastText onLeft" style="font-size: 20;">' . $forecast[1][$i]['weather'] . '</span></div><br>';
 
-					// echo '<img src="../icons/75/sample.png" style="float: left;">';
-					echo '<img src="../icons/75/' . $forecast[1][$i]['icon'] . '" style="float: left;">';
-
-					echo '<div style="position: relative; bottom: -5px;"><img src="../icons/30/maxtemp.png">' . $forecast[1][$i]['maxtemp'] . '</div>';
-					echo '<div style="position: relative; bottom: -5px;"><img src="../icons/30/mintemp.png">' . $forecast[1][$i]['mintemp'] . '</div>';
+					echo '<img class="onLeft forecastImg" src="../icons/75/' . 'sample' . '.png">';
+					// $forecast[1][$i]['icon']
+					echo '<div class="tempDiv"><img src="../icons/30/maxtemp.png"><span class="forecastText">' . $forecast[1][$i]['maxtemp'] . '</span></div>';
+					echo '<div class="tempDiv"><img src="../icons/30/mintemp.png"><span class="forecastText">' . $forecast[1][$i]['mintemp'] . '</span></div>';
 					echo '</div>';
 				}
 				echo '</div>';
 			?>
+		</div>
+
+		<div class="googleSearch">
+			<form method='get' action='https://www.google.com/search'>
+				<img src='../icons/Google.png'>
+				<div class='field'>
+					<p class='control has-icons-left'>
+						<input class='input is-medium is-rounded' type='text' name='q' size='31' placeholder='Search Google'>
+						<span class='icon is-left'>
+								<i class='fa fa-search' style='color: grey;'></i>
+						</span>
+					</p>
+				</div>
+			</form>
+			<div class='programmerQuotes'>
+				<?php
+					$res = getQuote();
+					echo '<span>' . $res[0] . '</span><br>';
+					echo '<span><b>- ' . $res[1] . '</b></span>';
+				?>
+			</div>
 		</div>
 	</body>
 </html>

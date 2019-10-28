@@ -1,8 +1,9 @@
 /*#######################################################################################################################*/
 /*#General###############################################################################################################*/
 /*#######################################################################################################################*/
-body {
-	/* background-color: #323639; */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 body * {
 	font-family: 'Hack';
@@ -81,48 +82,30 @@ ul li.link {
 	color: red;
 }
 /*#######################################################################################################################*/
-/*#Clock#################################################################################################################*/
-/*#######################################################################################################################*/
-/* .clock { */
-	/* position: absolute;
-	height: 20%;
-	top: 0px;
-	right: 1%;
-
-	text-align: center;
-	font-weight: bold;
-	font-size: 40; */
-/* } */
-/*#######################################################################################################################*/
 /*#GoogleSearch##########################################################################################################*/
 /*#######################################################################################################################*/
 .googleSearch {
 	background-color: black;
-	position: absolute;
-	width: 50%;
-	top: 24%;
-	left: 25%;
-
-	/* width: 40%;
-	left: 30%; */
+	position: fixed;
+	width: 53%;
+	top: 200px;
+	left: 23.5%;
+	height: 100%;
+	z-index: 1;
 }
 .googleSearch img {
 	position: relative;
 	width: 50%;
 	left: 25%;
-	margin-bottom: 1%;
 }
 /*#######################################################################################################################*/
 /*#WeatherForecast#######################################################################################################*/
 /*#######################################################################################################################*/
 .weatherForecast {
-	/* background-color: white; */
-	background-color: #323639;
 	position: absolute;
-	width: 35%;
-	height: 100%;
+	width: 575px;
 	top: 0px;
-	left: 0%;
+	left: 0px;
 }
 .sunText {
 	position: relative;
@@ -141,25 +124,52 @@ ul li.link {
 	top: -30px;
 	margin-right: 20px;
 
-	font-size: 40;
+	font-size: 40px;
 }
 .otherIcon {
 	position: relative;
 	top: -20px;
 }
+.forecastText {
+	position: relative;
+	top: -7px;
+}
+.forecastImg {
+	position: relative;
+	top: -20px;
+}
+.onLeft {
+	float: left;
+}
+.tempDiv {
+	position: relative;
+	top: -15px;
+}
+.forecast {
+	background-color: blueviolet;
+
+	position: relative;
+	top: 200px;
+	width: 390px;
+	left: 50px;
+	height: auto;
+}
+.showForecast {
+	background: red;
+	position: fixed;
+	width: 575px;
+	height: 200px;
+	z-index: 1;
+}
 /*#######################################################################################################################*/
 /*#ProgrammerQuotes######################################################################################################*/
 /*#######################################################################################################################*/
-/* .programmerQuotes {
+.programmerQuotes {
 	background-color: green;
-	position: absolute;
-	height: 25%;
-	width: 100%;
-	top: 75%;
-	left: 35%;
-	font-size: 25;
+	position: fixed;
+	width: 53%;
+	left: 23.5%;
+	height: 100%;
+	
+	font-size: 20;
 }
-.programmerQuotes span {
-	position: absolute;
-	bottom: 0;
-} */
