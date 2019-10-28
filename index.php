@@ -219,7 +219,7 @@
 
 				echo '<div class="showForecast" id="showForecast" onclick="showForecast()">';
 				// ' . $forecast[0][0]['icon'] . '
-				echo '<img src="../icons/125/sample.png" style="float: left;">';
+				echo '<img src="../icons/125/' . $forecast[0][0]['icon'] . '" style="float: left;">';
 				echo '<span style="font-size: 60; position: relative; left: 10px; top: -10px;">' . $forecast[0][0]['temp'] . '</span><br>';
 
 				echo '<img class="sunIcon" src="../icons/50/sunrise.png">';
@@ -235,11 +235,11 @@
 
 				echo '<div id="forecast" class="forecast">';
 				for($i = 1; $i < count($forecast[1]); $i++) {
-					echo '<div style="clear: left; position: relative; top: ' . -($i-1)*15 . ';">';
+					echo '<div style="clear: left; position: relative; top: ' . -($i-1)*0 . ';">';
 					echo '<div class="onLeft" style="font-size: 40;">At ' . $forecast[1][$i]['time'] . '<br>';
 					echo '<span class="forecastText onLeft" style="font-size: 20;">' . $forecast[1][$i]['weather'] . '</span></div><br>';
 
-					echo '<img class="onLeft forecastImg" src="../icons/75/' . 'sample' . '.png">';
+					echo '<img class="onLeft forecastImg" src="../icons/75/' . $forecast[1][$i]['icon'] . '">';
 					// $forecast[1][$i]['icon']
 					echo '<div class="tempDiv"><img src="../icons/30/maxtemp.png"><span class="forecastText">' . $forecast[1][$i]['maxtemp'] . '</span></div>';
 					echo '<div class="tempDiv"><img src="../icons/30/mintemp.png"><span class="forecastText">' . $forecast[1][$i]['mintemp'] . '</span></div>';
@@ -261,12 +261,36 @@
 					</p>
 				</div>
 			</form>
-			<div class='programmerQuotes'>
+			<!-- <div class='programmerQuotes'> -->
 				<?php
-					$res = getQuote();
-					echo '<span>' . $res[0] . '</span><br>';
-					echo '<span><b>- ' . $res[1] . '</b></span>';
+					// $res = getQuote();
+					// echo '<span>' . $res[0] . '</span><br>';
+					// echo '<span><b>- ' . $res[1] . '</b></span>';
 				?>
+			<!-- </div> -->
+			<div class='quickLinks'>
+				<ul style='margin-top: 6px;'>
+					<li id='UniFe1' class='first folderClosed' onclick='showChild("UniFe")'>UniFe
+						<ul id='UniFe2'>
+							<li id='Informatica1' class='folderClosed' onclick='showChild("Informatica")'>Informatica
+								<ul id='Informatica2'>
+									<li class='link'><a href='http://unife.it/scienze/informatica'>Home</a></li>
+									<li class='last link'><a
+								href='http://www.unife.it/scienze/informatica/studiare/programmi-insegnamenti-docenti/piano-degli-studi-270-ord-2016-aa2019-20'>Corsi</a></li>
+								</ul>
+							</li>
+							<li class='last link'><a href='http://studiare.unife.it/'>Area Personale</a></li>
+						</ul>
+					</li>
+					<li id='Reddit1' class='folderClosed' onclick='showChild("Reddit")'>Reddit
+						<ul id='Reddit2'>
+							<li class='link'><a href='https://www.reddit.com'>reddit.com</a></li>
+							<li class='last link'><a href='https://www.reddit.com/r/wallpapers/'>r/wallpapers</a></li>
+						</ul>
+					</li>
+					<li class='link'><a href='https://www.youtube.com'>YouTube</a></li>
+					<li class='last link'><a href='https://github.com/'>GitHub</a></li>
+				</ul>
 			</div>
 		</div>
 	</body>

@@ -73,7 +73,6 @@ When debugging, novices insert corrective code; experts remove defective code.|R
 JavaScript is the world's most misunderstood programming language.|Douglas Crockford
 Every good work of software starts by scratching a developer’s personal itch.|Eric S. Raymond
 You can have the project: Done On Time. Done On Budget. Done Properly - Pick two.|Anonymous
-Never trust a computer you can’t throw out a window.|Steve Wozniak
 The best way to predict the future is to invent it.|Alan Kay
 Codes are a puzzle. A game, just like any other game.|Alan Turing
 Documentation is a love letter that you write to your future self.|Damian Conway
