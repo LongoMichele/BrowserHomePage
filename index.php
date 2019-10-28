@@ -222,14 +222,14 @@
 				echo '<img src="./icons/125/' . $forecast[0][0]['icon'] . '" style="float: left;">';
 				echo '<span style="font-size: 60; position: relative; left: 10px; top: -10px;">' . $forecast[0][0]['temp'] . '</span><br>';
 
-				echo '<img class="sunIcon" src="./icons/50/sunrise.png">';
+				echo '<img class="sunIcon" src="./icons/sunrise.png">';
 				echo '<span class="sunText">' . $sunrise . '</span>';
-				echo ' <img class="sunIcon" src="./icons/50/sunset.png">';
+				echo ' <img class="sunIcon" src="./icons/sunset.png">';
 				echo '<span class="sunText">' . $sunset . '</span><br>';
 
-				echo '<img class="otherIcon" src="./icons/50/humidity.png">';
+				echo '<img class="otherIcon" src="./icons/humidity.png">';
 				echo '<span class="otherText">' . $forecast[0][0]['humidity'] . '</span>';
-				echo '<img class="otherIcon" src="./icons/50/wind.png" style="top: -25px;">';
+				echo '<img class="otherIcon" src="./icons/wind.png" style="top: -25px;">';
 				echo '<span class="otherText">' . $forecast[0][0]['wind'] . '</span><br>';
 				echo '</div>';
 
@@ -241,8 +241,8 @@
 
 					echo '<img class="onLeft forecastImg" src="./icons/75/' . $forecast[1][$i]['icon'] . '">';
 					// $forecast[1][$i]['icon']
-					echo '<div class="tempDiv"><img src="./icons/30/maxtemp.png"><span class="forecastText">' . $forecast[1][$i]['maxtemp'] . '</span></div>';
-					echo '<div class="tempDiv"><img src="./icons/30/mintemp.png"><span class="forecastText">' . $forecast[1][$i]['mintemp'] . '</span></div>';
+					echo '<div class="tempDiv"><img src="./icons/maxtemp.png"><span class="forecastText">' . $forecast[1][$i]['maxtemp'] . '</span></div>';
+					echo '<div class="tempDiv"><img src="./icons/mintemp.png"><span class="forecastText">' . $forecast[1][$i]['mintemp'] . '</span></div>';
 					echo '</div>';
 				}
 				echo '</div>';
