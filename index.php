@@ -251,7 +251,7 @@
 
 		<div class="googleSearch">
 			<form method='get' action='https://www.google.com/search'>
-				<img src='../icons/Google.png'>
+				<img src='./icons/Google.png'>
 				<div class='field'>
 					<p class='control has-icons-left'>
 						<input class='input is-medium is-rounded' type='text' name='q' size='31' placeholder='Search Google'>
