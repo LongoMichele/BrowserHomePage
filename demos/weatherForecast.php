@@ -126,7 +126,6 @@
 				$wind = getWind($hour->wind->speed);
 				$weather = $hour->weather[0]->description;
 				$weather = strtoupper(substr($weather, 0, 1)) . substr($weather, 1, strlen($weather)-1);
-				$weather = 'Scattered clouds';
 				$icon = '/' . substr($hour->weather[0]->icon, 0, 2) . $ampm . '.png';
 		
 				array_push($day, ['weather' => $weather, 'general' => $hour->weather[0]->main, 'icon' => $icon, 'time' => $time, 'humidity' => $humidity, 'temp' => $temp, 'maxtemp' => $maxtemp, 'mintemp' => $mintemp, 'wind' => $wind]);
@@ -148,7 +147,7 @@
 			$sunrise = $res[1];
 			$sunset = $res[2];
 
-			echo '<div id="showForecast" onclick="showForecast()">';
+			echo '<div id="showForecast" onclick="showForecast()" style="position: relative; width: 30%; left: 70%; background-color: blue;">';
 			// echo '<img src="../icons/125/sample.png" style="float: left;">';
 			echo '<img src="../icons/125' . $forecast[0][0]['icon'] . '" style="float: left;">';
 			echo '<span style="font-size: 60; position: relative; left: 10px;">' . $forecast[0][0]['temp'] . '</span><br>';

@@ -48,7 +48,6 @@
 		}
 		return $line;
 	}
-	
 	function getQuote() {
 		$string = readLines();
 		$token = strtok($string, '|');

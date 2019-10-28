@@ -1,0 +1,175 @@
+/*#######################################################################################################################*/
+/*#General###############################################################################################################*/
+/*#######################################################################################################################*/
+body {
+	background-color: #323639;
+}
+body * {
+	font-family: 'Hack';
+	color: rgb(250, 250, 250);
+	user-select: none;
+}
+/*#######################################################################################################################*/
+/*#QuickLink#############################################################################################################*/
+/*#######################################################################################################################*/
+.quickLinks {
+	/* background-color: red; */
+	position: absolute;
+	/* width: 36%; */
+	/* left: 34%; */
+
+	font-size: 20;
+}
+.quickLinks ul {
+	list-style-type: none;
+}
+ul li {
+	position: relative;
+	left: 20px;
+	margin-top: -6px;
+}
+ul li.first {
+	position: relative;
+	margin-top: 0px;
+}
+ul li ul li {
+	display: none;
+}
+/* Folder and Links */
+ul li.folderClosed:before, ul li.folderOpened:before, ul li.link:before, 
+ul li.first.folderClosed:before, ul li.first.folderOpened:before, ul li.first.link:before,
+ul li.last.folderClosed:before, ul li.last.folderOpened:before, ul li.last.link:before {
+	font-family: 'FontAwesome';
+	color: rgb(250, 250, 250);
+}
+ul li.folderClosed:before {
+	content: '\251C \00A0 \F07B \00A0';
+}
+ul li.folderOpened:before {
+	content: '\251C \00A0 \F07C \00A0';
+}
+ul li.link:before {
+	content: '\251C \00A0 \F0C1 \00A0';
+}
+ul li.first.folderClosed:before {
+	content: '\250C \00A0 \F07B \00A0';
+
+}
+ul li.first.folderOpened:before {
+	content: '\250C \00A0 \F07C \00A0';
+
+}
+ul li.first.link:before {
+	content: '\250C \00A0 \F0C1 \00A0';
+
+}
+ul li.last.folderClosed:before {
+	content: '\2514 \00A0 \F07B \00A0';
+
+}
+ul li.last.folderOpened:before {
+	content: '\2514 \00A0 \F07C \00A0';
+}
+ul li.last.link:before {
+	content: '\2514 \00A0 \F0C1 \00A0';
+}
+
+ul li.folderClosed, ul li.folderOpened {
+	font-weight: bold;
+}
+ul li.link {
+	font-weight: normal;
+}
+
+.quickLinks a:hover {
+	color: red;
+}
+/*#######################################################################################################################*/
+/*#Clock#################################################################################################################*/
+/*#######################################################################################################################*/
+.clock {
+	position: absolute;
+	height: 20%;
+	top: 0px;
+	right: 1%;
+
+	text-align: center;
+	font-weight: bold;
+	font-size: 40;
+}
+/*#######################################################################################################################*/
+/*#GoogleSearch##########################################################################################################*/
+/*#######################################################################################################################*/
+.googleSearch {
+	/* background-color: black; */
+	position: absolute;
+	width: 50%;
+	top: 24%;
+	left: 25%;
+
+	/* width: 40%;
+	left: 30%; */
+}
+.googleSearch img {
+	position: relative;
+	width: 50%;
+	left: 25%;
+	margin-bottom: 1%;
+}
+/*#######################################################################################################################*/
+/*#WeatherForecast#######################################################################################################*/
+/*#######################################################################################################################*/
+.getWeather {
+	/* background-color: blue; */
+	position: absolute;
+	width: 35%;
+	top: 0px;
+	left: 0%;
+}
+.temp {
+	position: relative; 
+	left: 10px;
+
+	font-size: 60;
+}
+.sun {
+	position: relative;
+	left: 10px;
+	top: -15px;
+}
+.text {
+	position: relative;
+	left: 15px;
+	top: -35px;
+
+	font-size: 25px;
+}
+.other {
+	position: relative;
+	top: -25px;
+
+	clear: left;
+	float: left;
+}
+.second {
+	position: relative;
+	top: -25px;
+
+	font-size: 35px;
+}
+/*#######################################################################################################################*/
+/*#ProgrammerQuotes######################################################################################################*/
+/*#######################################################################################################################*/
+.programmerQuotes {
+	/* background-color: green; */
+	position: absolute;
+	height: 25%;
+	width: 100%;
+	top: 75%;
+	left: 35%;
+	font-size: 25;
+}
+.programmerQuotes span {
+	position: absolute;
+	bottom: 0;
+}
