@@ -209,43 +209,8 @@
 		<script type='text/javascript' src='./res/scripts.js'></script>
 	</head>
 	<body>
-		
-
-		<div class='clock'>
-			<span id='clock'></span><br>
-			<span id='date'></span>
-		</div>
-
-		
-
-		<div class='programmerQuotes'>
+		<div class='weatherForecast'>
 			<?php
-				$res = getQuote();
-				echo '<span>' . $res[0] . '<br>';
-				echo '<b>- ' . $res[1] . '</b></span>';
-			?>
-		</div>
-
-		<div class='getWeather'>
-			<?php
-				// $res = getWeather();
-				// $weather = $res[0];
-				// $sunrise = $res[1];
-				// $sunset = $res[2];
-
-				// echo '<img src="./icons/125' . $weather['icon'] . '" style="float: left;">';
-				// echo '<span class="temp">' . $weather['temp'] . '</span><br>';
-
-				// echo '<img src="../icons/50/sunrise.png" class="sun">';
-				// echo '<span class="text">' . $sunrise . '</span>';
-				// echo ' <img src="../icons/50/sunset.png" class="sun">';
-				// echo '<span class="text">' . $sunset . '</span><br>';
-
-				// echo '<img src="./icons/50/wind.png" class="other" style="left: 3;">';
-				// // echo '<span style="font-size: 40; position: relative; left: 28px; top: -10px;">' . $weather['wind'] . '</span><br>';
-				// echo '<div class="text second">' . $weather['wind'] . '</div>';
-				// echo '<img src="./icons/50/humidity.png" class="other" style="left: 5;">';
-				// echo '<div class="text second">' . $weather['humidity'] . '</div>';
 				$res = getForecast();
 				$forecast = $res[0];
 				$sunrise = $res[1];
@@ -254,19 +219,17 @@
 				echo '<div id="showForecast" onclick="showForecast()">';
 				// echo '<img src="../icons/125/sample.png" style="float: left;">';
 				echo '<img src="../icons/125' . $forecast[0][0]['icon'] . '" style="float: left;">';
-				echo '<span style="font-size: 60; position: relative; left: 10px;">' . $forecast[0][0]['temp'] . '</span><br>';
+				echo '<span style="font-size: 60; position: relative; left: 10px; top: -10px;">' . $forecast[0][0]['temp'] . '</span><br>';
 
-				echo '<div style="position: relative; left: 5;">';
-				echo '<img src="../icons/50/sunrise.png">';
-				echo '<span style="position: relative; top: -15px; font-size: 25px; left: 5px;">' . $sunrise . '</span>';
-				echo ' <img src="../icons/50/sunset.png" style="position: relative;">';
-				echo '<span style="position: relative; top: -15px; font-size: 25px; left: 5;">' . $sunset . '</span>';
-				echo '</div>';
+				echo '<img class="sunIcon" src="../icons/50/sunrise.png">';
+				echo '<span class="sunText">' . $sunrise . '</span>';
+				echo ' <img class="sunIcon" src="../icons/50/sunset.png">';
+				echo '<span class="sunText">' . $sunset . '</span><br>';
 
-				echo '<img src="../icons/50/humidity.png" style="position: relative;">';
-				echo '<span style="font-size: 40; position: relative; top: -10px;">' . $forecast[0][0]['humidity'] . '</span>';
-				echo '<img src="../icons/50/wind.png" style="position: relative; left: 25px;">';
-				echo '<span style="font-size: 40; position: relative; left: 28px; top: -10px;">' . $forecast[0][0]['wind'] . '</span><br>';
+				echo '<img class="otherIcon" src="../icons/50/humidity.png">';
+				echo '<span class="otherText">' . $forecast[0][0]['humidity'] . '</span>';
+				echo '<img class="otherIcon" src="../icons/50/wind.png" style="top: -25px;">';
+				echo '<span class="otherText">' . $forecast[0][0]['wind'] . '</span><br>';
 				echo '</div>';
 
 				echo '<div id="forecast" style="display: none;">';
@@ -284,43 +247,6 @@
 				}
 				echo '</div>';
 			?>
-		</div>
-		
-		<div class='googleSearch'>
-			<form method='get' action='https://www.google.com/search'>
-				<img src='../icons/Google.png'>
-				<div class='field'>
-					<p class='control has-icons-left'>
-						<input class='input is-medium is-rounded' type='text' name='q' size='31' placeholder='Search Google'>
-						<span class='icon is-left'>
-								<i class='fa fa-search' style='color: grey;'></i>
-						</span>
-					</p>
-				</div>
-			</form>
-			<div class='quickLinks'>
-			<ul>
-				<li id='UniFe1' class='first folderClosed' onclick='showChild("UniFe")'>UniFe
-					<ul id='UniFe2'>
-						<li id='Informatica1' class='folderClosed' onclick='showChild("Informatica")'>Informatica
-							<ul id='Informatica2'>
-								<li class='link'><a href='http://unife.it/scienze/informatica'>Home</a></li>
-								<li class='last link'><a href='http://www.unife.it/scienze/informatica/studiare/programmi-insegnamenti-docenti/piano-degli-studi-270-ord-2016-aa2019-20'>Corsi</a></li>
-							</ul>
-						</li>
-						<li class='last link'><a href='http://studiare.unife.it/'>Area Personale</a></li>
-					</ul>
-				</li>
-				<li id='Reddit1' class='folderClosed' onclick='showChild("Reddit")'>Reddit
-					<ul id='Reddit2'>
-						<li class='link'><a href='https://www.reddit.com'>reddit.com</a></li>
-						<li class='last link'><a href='https://www.reddit.com/r/wallpapers/'>r/wallpapers</a></li>
-					</ul>
-				</li>
-				<li class='link'><a href='https://www.youtube.com'>YouTube</a></li>
-				<li class='last link'><a href='https://github.com/'>GitHub</a></li>
-			</ul>
-		</div>
 		</div>
 	</body>
 </html>
