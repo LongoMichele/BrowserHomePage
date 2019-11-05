@@ -237,7 +237,7 @@
 					<ul id='Frequent2'>
 						<li class='link'><a href='https://github.com/'>GitHub</a></li>
 						<li class='link'><a href='https://epic7x.com/'>E7 Wiki</a></li>
-						<li class='last link'><a href='http://http://localhost:8000/'>localhost:8000</a></li>
+						<li class='last link'><a href='http://localhost:8000/'>localhost:8000</a></li>
 					</ul>
 				</li>
 				<li id='UniFe1' class='folderClosed' onclick='showChild("UniFe")'>UniFe
@@ -300,91 +300,6 @@
 				}
 				echo '</div>';
 			?>
-		</div>
-
-
-
-
-
-
-
-
-
-		<!-- <div class='weatherForecast'>
-			<?php
-				// $res = getForecast();
-				// $forecast = $res[0];
-				// $sunrise = $res[1];
-				// $sunset = $res[2];
-
-				// echo '<div class="showForecast" id="showForecast" onclick="showForecast()">';
-				// // ' . $forecast[0][0]['icon'] . '
-				// echo '<img src="./icons/125/' . $forecast[0][0]['icon'] . '" style="float: left;">';
-				// echo '<span style="font-size: 60; position: relative; left: 10px; top: -10px;">' . $forecast[0][0]['temp'] . '</span><br>';
-
-				// echo '<img class="sunIcon" src="./icons/sunrise.png">';
-				// echo '<span class="sunText">' . $sunrise . '</span>';
-				// echo ' <img class="sunIcon" src="./icons/sunset.png">';
-				// echo '<span class="sunText">' . $sunset . '</span><br>';
-
-				// echo '<img class="otherIcon" src="./icons/humidity.png">';
-				// echo '<span class="otherText">' . $forecast[0][0]['humidity'] . '</span>';
-				// echo '<img class="otherIcon" src="./icons/wind.png" style="top: -25px;">';
-				// echo '<span class="otherText">' . $forecast[0][0]['wind'] . '</span><br>';
-				// echo '</div>';
-
-				// echo '<div id="forecast" class="forecast">';
-				// for($i = 1; $i < count($forecast[1]); $i++) {
-				// 	echo '<div style="clear: left; position: relative; top: ' . -($i-1)*0 . ';">';
-				// 	echo '<div class="onLeft" style="font-size: 40;">At ' . $forecast[1][$i]['time'] . '<br>';
-				// 	echo '<span class="forecastText onLeft" style="font-size: 20;">' . $forecast[1][$i]['weather'] . '</span></div><br>';
-
-				// 	echo '<img class="onLeft forecastImg" src="./icons/75/' . $forecast[1][$i]['icon'] . '">';
-				// 	// $forecast[1][$i]['icon']
-				// 	echo '<div class="tempDiv"><img src="./icons/maxtemp.png"><span class="forecastText">' . $forecast[1][$i]['maxtemp'] . '</span></div>';
-				// 	echo '<div class="tempDiv"><img src="./icons/mintemp.png"><span class="forecastText">' . $forecast[1][$i]['mintemp'] . '</span></div>';
-				// 	echo '</div>';
-				// }
-				// echo '</div>';
-			?>
-		</div> -->
-
-		<!-- <div class="googleSearch">
-			<form method='get' action='https://www.google.com/search'>
-				<img src='./icons/Google.png'>
-				<div class='field'>
-					<p class='control has-icons-left'>
-						<input class='input is-medium is-rounded' type='text' name='q' size='31' placeholder='Search Google'>
-						<span class='icon is-left'>
-								<i class='fa fa-search' style='color: grey;'></i>
-						</span>
-					</p>
-				</div>
-			</form> -->
-			<!-- <div class='quickLinks'>
-				<ul style='margin-top: 6px;'>
-					<li id='UniFe1' class='first folderClosed' onclick='showChild("UniFe")'>UniFe
-						<ul id='UniFe2'>
-							<li id='Informatica1' class='folderClosed' onclick='showChild("Informatica")'>Informatica
-								<ul id='Informatica2'>
-									<li class='link'><a href='http://unife.it/scienze/informatica'>Home</a></li>
-									<li class='last link'><a
-								href='http://www.unife.it/scienze/informatica/studiare/programmi-insegnamenti-docenti/piano-degli-studi-270-ord-2016-aa2019-20'>Corsi</a></li>
-								</ul>
-							</li>
-							<li class='last link'><a href='http://studiare.unife.it/'>Area Personale</a></li>
-						</ul>
-					</li>
-					<li id='Reddit1' class='folderClosed' onclick='showChild("Reddit")'>Reddit
-						<ul id='Reddit2'>
-							<li class='link'><a href='https://www.reddit.com'>reddit.com</a></li>
-							<li class='last link'><a href='https://www.reddit.com/r/wallpapers/'>r/wallpapers</a></li>
-						</ul>
-					</li>
-					<li class='link'><a href='https://www.youtube.com'>YouTube</a></li>
-					<li class='last link'><a href='https://github.com/'>GitHub</a></li>
-				</ul>
-			</div> -->
 		</div>
 	</body>
 </html>
