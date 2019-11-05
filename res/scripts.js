@@ -43,28 +43,16 @@ function showChild(id) {
 	for (var i = 0; i < childs.length; i++) {
 		childs[i].style.display = 'block';
 	}
-	// CL = document.getElementById(id + '1').classList;
-	// if (CL.contains('folderClosed')) {
-	// 	CL.remove('folderClosed');
-	// 	CL.add('folderOpened');
-	// }
-	// else {
-	// 	CL.remove('folderOpened');
-	// 	CL.add('folderClosed');
-	// }
-	// var childs = document.getElementById(id + '2').children;
-	// for (var i = 0; i < childs.length; i++) {
-	// 	if (childs[i].style.display == 'block') {
-	// 		childs[i].style.display = '';
-	// 	}
-	// 	else {
-	// 		childs[i].style.display = 'block';
-	// 	}
-	// }
 }
 /*#######################################################################################################################*/
 /*#WeatherForecast#######################################################################################################*/
 /*#######################################################################################################################*/
 function showForecast() {
 	document.getElementById('forecast').style.display = 'block';
+}
+/*#######################################################################################################################*/
+/*#Other#################################################################################################################*/
+/*#######################################################################################################################*/
+function focus() {
+	document.getElementById('searchBar').focus();
 }
