@@ -1,0 +1,8 @@
+.weatherForecast {
+	display: block;
+}
+@media screen and (max-width: 1800px) {
+	.weatherForecast .wind {
+		display: none;
+	}
+}

@@ -1,0 +1,14 @@
+.googleSearch {
+	/* background-color: purple; */
+	width: 80%;
+	left: 10%;
+}
+.quickLinks {
+	/* background-color: green; */
+	/* width: 30%; */
+	left: 35%;
+	font-size: 130%;
+}
+.weatherForecast {
+	display: none;
+}
