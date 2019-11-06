@@ -208,9 +208,9 @@
 		<link rel='stylesheet' href='./res/style.css'>
 		<link rel='stylesheet' href='./res/bulma/css/bulma.min.css'>
 		<link rel='stylesheet' href='./res/font-awesome/css/font-awesome.min.css'>
-		<link rel="stylesheet" type="text/css" media='screen and (max-width: 960px)' href='res/small.css'>
-		<link rel="stylesheet" type="text/css" media='screen and (min-width: 961px)' href='res/normal.css'>
-		<link rel="stylesheet" type="text/css" media='screen and (min-width: 1200px)' href='res/big.css'>
+		<link rel="stylesheet" type="text/css" media='screen and (max-width: 960px)' href='./res/small.css'>
+		<link rel="stylesheet" type="text/css" media='screen and (min-width: 961px)' href='./res/normal.css'>
+		<link rel="stylesheet" type="text/css" media='screen and (min-width: 1200px)' href='./res/big.css'>
 		
 		<script type='text/javascript' src='./res/scripts.js'></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
