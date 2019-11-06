@@ -233,17 +233,17 @@
 
 		<div class='quickLinks'>
 			<ul style='margin-top: 6px;'>
-				<li id='Frequent1' class='first folderClosed' onclick='showChild("Frequent")'>Frequent
-					<ul id='Frequent2'>
+				<li id='FrequentFolder' class='first folderClosed'><a class='folder' onclick='manageFolder("Frequent")'>Frequent</a>
+					<ul id='Frequent'>
 						<li class='link'><a href='https://github.com/'>GitHub</a></li>
 						<li class='link'><a href='https://epic7x.com/'>E7 Wiki</a></li>
 						<li class='last link'><a href='http://localhost:8000/'>localhost:8000</a></li>
 					</ul>
 				</li>
-				<li id='UniFe1' class='folderClosed' onclick='showChild("UniFe")'>UniFe
-					<ul id='UniFe2'>
-						<li id='Informatica1' class='folderClosed' onclick='showChild("Informatica")'>Informatica
-							<ul id='Informatica2'>
+				<li id='UniFeFolder' class='folderClosed'><a class='folder' onclick='manageFolder("UniFe")'>UniFe</a>
+					<ul id='UniFe'>
+						<li id='InformaticaFolder' class='folderClosed'><a class='folder' onclick='manageFolder("Informatica")'>Informatica</a>
+							<ul id='Informatica'>
 								<li class='link'><a href='http://unife.it/scienze/informatica'>Home</a></li>
 								<li class='last link'><a href='http://www.unife.it/scienze/informatica/studiare/programmi-insegnamenti-docenti/piano-degli-studi-270-ord-2016-aa2019-20'>Corsi</a></li>
 							</ul>
@@ -251,8 +251,8 @@
 						<li class='last link'><a href='http://studiare.unife.it/'>Area Personale</a></li>
 					</ul>
 				</li>
-				<li id='Reddit1' class='folderClosed' onclick='showChild("Reddit")'>Reddit
-					<ul id='Reddit2'>
+				<li id='RedditFolder' class='folderClosed'><a class='folder' onclick='manageFolder("Reddit")'>Reddit</a>
+					<ul id='Reddit'>
 						<li class='link'><a href='https://www.reddit.com'>reddit.com</a></li>
 						<li class='last link'><a href='https://www.reddit.com/r/wallpapers/'>r/wallpapers</a></li>
 					</ul>

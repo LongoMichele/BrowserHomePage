@@ -55,7 +55,8 @@ li.last.folderOpened:before,
 li.last.link:before {
 	font-weight: normal;
 	font-family: 'FontAwesome';
-	color: rgb(250, 250, 250);
+	/* color: rgb(250, 250, 250); */
+	color: darkgrey;
 }
 
 li.folderClosed:before {
@@ -86,18 +87,22 @@ li.last.link:before {
 	content: '\2514 \00A0 \F0C1 \00A0';
 }
 
-li.folderClosed, li.folderOpened {
-	font-weight: bold;
-	color: darkgrey;
-}
 li.link {
 	font-weight: normal;
 }
 a:link, a:visited {
-	color: rgb(24, 163, 154);
+	color: teal;
 }
 li a:hover {
 	color: crimson;
+}
+a.folder {
+	font-weight: bold;
+	color: cadetblue;
+	text-decoration: none;
+}
+a.folder:hover {
+	color: steelblue;
 }
 
 /*#######################################################################################################################*/

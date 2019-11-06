@@ -6,8 +6,12 @@
 .quickLinks {
 	/* background-color: purple; */
 	/* width: 30%; */
-	left: 42%;
-	font-size: 150%;
+	left: 39%;
+	font-size: 180%;
+}
+ul li {
+	margin-left: 30px;
+	margin-top: -10px;
 }
 .weatherForecast {
 	display: none;

@@ -44,6 +44,24 @@ function showChild(id) {
 		childs[i].style.display = 'block';
 	}
 }
+function manageFolder(id) {
+	if (document.getElementById(id + 'Folder').classList.contains('folderClosed')) {
+		document.getElementById(id + 'Folder').classList.remove('folderClosed');
+		document.getElementById(id + 'Folder').classList.add('folderOpened');
+		var childs = document.getElementById(id).children;
+		for (var i = 0; i < childs.length; i++) {
+			childs[i].style.display = 'block';
+		}
+	}
+	else {
+		document.getElementById(id + 'Folder').classList.remove('folderOpened');
+		document.getElementById(id + 'Folder').classList.add('folderClosed');
+		var childs = document.getElementById(id).children;
+		for (var i = 0; i < childs.length; i++) {
+			childs[i].style.display = '';
+		}
+	}
+}
 /*#######################################################################################################################*/
 /*#WeatherForecast#######################################################################################################*/
 /*#######################################################################################################################*/
