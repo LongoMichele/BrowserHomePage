@@ -162,7 +162,7 @@ a.folder:hover {
 	display: none;
 }
 .showForecast {
-	/* background: red; */
+	background: #323639;
 	/* background-color: #323639; */
 	position: fixed;
 	width: 575px;
@@ -173,11 +173,12 @@ a.folder:hover {
 /*#ProgrammerQuotes######################################################################################################*/
 /*#######################################################################################################################*/
 .programmerQuotes {
-	background-color: green;
+	background: #323639;
+	/* background-color: green; */
 	position: fixed;
-	width: 53%;
-	left: 23.5%;
-	height: 100%;
+	width: calc(100% - 20px);
+	left: 10px;
+	bottom: 0%;
 	
 	font-size: 20;
 }

@@ -7,7 +7,7 @@
 		$json = json_decode(file_get_contents($url));
 
 		$separator = '|';
-		$maxlen = 90;
+		$maxlen = 200;
 		$quotes = array();
 		for($i = 1; $i < count($json); $i++) {
 			if(strlen($json[$i]->en) <= $maxlen) {
@@ -151,13 +151,12 @@
 		$cityID = '3171829';
 		$lang = 'en';
 		$url = 'http://api.openweathermap.org/data/2.5/forecast?units=metric&id=' . $cityID . '&lang=' . $lang . '&APPID=' . $userID;
-		// $url = 'http://api.openweathermap.org/data/2.5/forecast?id=' . $cityID . '&units=metric&APPID=' . $userID;
+		$url = 'http://api.openweathermap.org/data/2.5/forecast?id=' . $cityID . '&units=metric&APPID=' . $userID;
 		$json = json_decode(file_get_contents($url));
 
 		$sunrise = $json->city->sunrise;
 		$sunset = $json->city->sunset;
 		$date = new DateTime();
-		$curtime = date('H:i:s', $date->getTimestamp());
 
 		$ampm;
 		if(date('H:i:s', $date->getTimestamp()) < date('H:i:s', $sunset)) {
@@ -171,12 +170,9 @@
 
 		$curdate = substr($json->list[0]->dt_txt, 8, 2);
 		$forecast = array();
-		$day = array();
 		foreach($json->list as $hour) {
 			if($curdate != substr($hour->dt_txt, 8, 2)) {
-					$curdate = substr($hour->dt_txt, 8, 2);
-					array_push($forecast, $day);
-					$day = array();
+					break;
 				}
 				$time = substr($hour->dt_txt, 11, 5);
 				$humidity = $hour->main->humidity . '%';
@@ -188,7 +184,7 @@
 				$weather = strtoupper(substr($weather, 0, 1)) . substr($weather, 1, strlen($weather)-1);
 				$icon = '/' . substr($hour->weather[0]->icon, 0, 2) . $ampm . '.png';
 		
-				array_push($day, ['weather' => $weather, 'general' => $hour->weather[0]->main, 'icon' => $icon, 'time' => $time, 'humidity' => $humidity, 'temp' => $temp, 'maxtemp' => $maxtemp, 'mintemp' => $mintemp, 'wind' => $wind]);
+				array_push($forecast, ['weather' => $weather, 'general' => $hour->weather[0]->main, 'icon' => $icon, 'time' => $time, 'humidity' => $humidity, 'temp' => $temp, 'maxtemp' => $maxtemp, 'mintemp' => $mintemp, 'wind' => $wind]);
 		}
 
 		return [$forecast, $sunrise, $sunset];
@@ -213,7 +209,6 @@
 		<link rel="stylesheet" type="text/css" media='screen and (min-width: 1200px)' href='./res/big.css'>
 		
 		<script type='text/javascript' src='./res/scripts.js'></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	</head>
 	
 	<body onload='focus()'>
@@ -271,34 +266,42 @@
 
 				echo '<div class="showForecast" id="showForecast" onclick="showForecast()">';
 				// ' . $forecast[0][0]['icon'] . '
-				echo '<img src="./icons/100/' . $forecast[0][0]['icon'] . '" style="float: left;">';
-				echo '<span style="font-size: 50; position: relative; left: 10px; top: -10px;">' . $forecast[0][0]['temp'] . '</span><br>';
+				echo '<img src="./icons/100' . $forecast[0]['icon'] . '" style="float: left;">';
+				echo '<span style="font-size: 50; position: relative; left: 10px; top: -10px;">' . $forecast[0]['temp'] . '</span><br>';
 
 				echo '<img class="sunIcon" src="./icons/sunrise.png">';
 				echo '<span class="sunText">' . $sunrise . '</span>';
 				echo ' <img class="sunIcon" src="./icons/sunset.png">';
 				echo '<span class="sunText">' . $sunset . '</span><br>';
 
+				echo '<span class="sub">';
 				echo '<img class="otherIcon" src="./icons/humidity.png">';
-				echo '<span class="otherText">' . $forecast[0][0]['humidity'] . '</span>';
-				echo '<span class="wind">';
+				echo '<span class="otherText">' . $forecast[0]['humidity'] . '</span>';
 				echo '<img class="otherIcon" src="./icons/wind.png" style="top: -25px;">';
-				echo '<span class="otherText">' . $forecast[0][0]['wind'] . '</span><br>';
+				echo '<span class="otherText">' . $forecast[0]['wind'] . '</span><br>';
 				echo '</span></div>';
 
+				// echo '<div id="forecast" class="forecast" onclick="showFullForecast()">';
 				echo '<div id="forecast" class="forecast">';
-				for($i = 1; $i < count($forecast[1]); $i++) {
+				for($i = 1; $i < count($forecast); $i++) {
 					echo '<div style="clear: left; position: relative; top: ' . -($i-1)*25 . ';">';
-					echo '<div class="onLeft" style="font-size: 25;">At ' . $forecast[1][$i]['time'] . '<br>';
-					echo '<span class="forecastText onLeft" style="font-size: 12;">' . $forecast[1][$i]['weather'] . '</span></div><br>';
+					echo '<div class="onLeft" style="font-size: 25;">At ' . $forecast[$i]['time'] . '<br>';
+					echo '<span class="forecastText onLeft" style="font-size: 12;">' . $forecast[$i]['weather'] . '</span></div><br>';
 
-					echo '<img class="onLeft forecastImg" src="./icons/45/' . $forecast[1][$i]['icon'] . '">';
+					echo '<img class="onLeft forecastImg" src="./icons/45' . $forecast[$i]['icon'] . '">';
 					// $forecast[1][$i]['icon']
-					echo '<div class="tempDiv"><img src="./icons/maxtemp.png"><span class="forecastText">' . $forecast[1][$i]['maxtemp'] . '</span></div>';
-					echo '<div class="tempDiv"><img src="./icons/mintemp.png" style="position: relative; top: -8;"><span class="forecastText" style="top: -14;">' . $forecast[1][$i]['mintemp'] . '</span></div>';
+					echo '<div class="tempDiv"><img src="./icons/maxtemp.png"><span class="forecastText">' . $forecast[$i]['maxtemp'] . '</span></div>';
+					echo '<div class="tempDiv"><img src="./icons/mintemp.png" style="position: relative; top: -8;"><span class="forecastText" style="top: -14;">' . $forecast[$i]['mintemp'] . '</span></div>';
 					echo '</div>';
 				}
 				echo '</div>';
+			?>
+		</div>
+
+		<div class='programmerQuotes'>
+			<?php
+				$quote = getQuote();
+				echo '<b>' . $quote[0] . '</b><br>&nbsp;- ' . $quote[1];
 			?>
 		</div>
 	</body>

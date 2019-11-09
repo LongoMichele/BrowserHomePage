@@ -2,7 +2,15 @@
 	display: block;
 }
 @media screen and (max-width: 1800px) {
-	.weatherForecast .wind {
+	.weatherForecast .sub {
 		display: none;
+	}
+	.weatherForecast .forecast {
+		position: relative;
+		margin-top: -40px;
+	}
+	.weatherForecast .showForecast {
+		width: 400px;
+		height: 95;
 	}
 }
