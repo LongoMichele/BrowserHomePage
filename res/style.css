@@ -3,7 +3,7 @@
 /*#######################################################################################################################*/
 ::-webkit-scrollbar {
     width: 0px;
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    background: transparent;
 }
 body * {
 	font-family: 'Hack';
@@ -36,7 +36,7 @@ body * {
 .quickLinks ul {
 	list-style-type: none;
 }
-ul li ul li {
+ul li.folderClosed li {
 	display: none;
 }
 ul li {
@@ -55,7 +55,6 @@ li.last.folderOpened:before,
 li.last.link:before {
 	font-weight: normal;
 	font-family: 'FontAwesome';
-	/* color: rgb(250, 250, 250); */
 	color: darkgrey;
 }
 
@@ -86,15 +85,14 @@ li.last.folderOpened:before {
 li.last.link:before {
 	content: '\2514 \00A0 \F0C1 \00A0';
 }
-
 li.link {
 	font-weight: normal;
 }
-a:link, a:visited {
-	color: teal;
-}
 li a:hover {
 	color: crimson;
+}
+a:link, a:visited {
+	color: teal;
 }
 a.folder {
 	font-weight: bold;
@@ -104,7 +102,6 @@ a.folder {
 a.folder:hover {
 	color: steelblue;
 }
-
 /*#######################################################################################################################*/
 /*#WeatherForecast#######################################################################################################*/
 /*#######################################################################################################################*/
@@ -163,7 +160,6 @@ a.folder:hover {
 }
 .showForecast {
 	background: #323639;
-	/* background-color: #323639; */
 	position: fixed;
 	width: 575px;
 	height: 145px;
@@ -174,7 +170,6 @@ a.folder:hover {
 /*#######################################################################################################################*/
 .programmerQuotes {
 	background: #323639;
-	/* background-color: green; */
 	position: fixed;
 	width: calc(100% - 20px);
 	left: 10px;

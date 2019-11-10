@@ -90,7 +90,6 @@
 		}
 		return $parsed;
 	}
-
 	function getWind($wind) {
 		switch($wind) {
 			case $wind <= 0.5:
@@ -137,7 +136,6 @@
 				break;
 		}
 		return $wind;
-
 	}
 	function getForecast(){
 		if ($fh = fopen('./res/.weatherUserID', 'r')) {
@@ -210,7 +208,6 @@
 		
 		<script type='text/javascript' src='./res/scripts.js'></script>
 	</head>
-	
 	<body onload='focus()'>
 		<div class='googleSearch'>
 			<form method='get' action='https://www.google.com/search'>
@@ -249,6 +246,7 @@
 				<li id='RedditFolder' class='folderClosed'><a class='folder' onclick='manageFolder("Reddit")'>Reddit</a>
 					<ul id='Reddit'>
 						<li class='link'><a href='https://www.reddit.com'>reddit.com</a></li>
+						<li class='link'><a href='https://www.reddit.com/r/EpicSeven/'>r/EpicSeven</a></li>
 						<li class='last link'><a href='https://www.reddit.com/r/wallpapers/'>r/wallpapers</a></li>
 					</ul>
 				</li>
@@ -265,7 +263,6 @@
 				$sunset = $res[2];
 
 				echo '<div class="showForecast" id="showForecast" onclick="showForecast()">';
-				// ' . $forecast[0][0]['icon'] . '
 				echo '<img src="./icons/100' . $forecast[0]['icon'] . '" style="float: left;">';
 				echo '<span style="font-size: 50; position: relative; left: 10px; top: -10px;">' . $forecast[0]['temp'] . '</span><br>';
 
@@ -281,7 +278,6 @@
 				echo '<span class="otherText">' . $forecast[0]['wind'] . '</span><br>';
 				echo '</span></div>';
 
-				// echo '<div id="forecast" class="forecast" onclick="showFullForecast()">';
 				echo '<div id="forecast" class="forecast">';
 				for($i = 1; $i < count($forecast); $i++) {
 					echo '<div style="clear: left; position: relative; top: ' . -($i-1)*25 . ';">';
@@ -289,7 +285,6 @@
 					echo '<span class="forecastText onLeft" style="font-size: 12;">' . $forecast[$i]['weather'] . '</span></div><br>';
 
 					echo '<img class="onLeft forecastImg" src="./icons/45' . $forecast[$i]['icon'] . '">';
-					// $forecast[1][$i]['icon']
 					echo '<div class="tempDiv"><img src="./icons/maxtemp.png"><span class="forecastText">' . $forecast[$i]['maxtemp'] . '</span></div>';
 					echo '<div class="tempDiv"><img src="./icons/mintemp.png" style="position: relative; top: -8;"><span class="forecastText" style="top: -14;">' . $forecast[$i]['mintemp'] . '</span></div>';
 					echo '</div>';
