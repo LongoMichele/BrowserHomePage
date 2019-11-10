@@ -227,8 +227,13 @@
 			<ul style='margin-top: 6px;'>
 				<li id='FrequentFolder' class='first folderClosed'><a class='folder' onclick='manageFolder("Frequent")'>Frequent</a>
 					<ul id='Frequent'>
+						<li id='E7Folder' class='folderClosed'><a class='folder' onclick='manageFolder("E7")'>Epic Seven</a>
+							<ul id='E7'>
+								<li class='link'><a href='https://epic7x.com/'>Wiki</a></li>
+								<li class='last Link'><a href='https://budandan.github.io/e7-damage-calc/index.html'>Dmg Calc</a></li>
+							</ul>
+						</li>
 						<li class='link'><a href='https://github.com/'>GitHub</a></li>
-						<li class='link'><a href='https://epic7x.com/'>E7 Wiki</a></li>
 						<li class='last link'><a href='http://localhost:8000/'>localhost:8000</a></li>
 					</ul>
 				</li>
