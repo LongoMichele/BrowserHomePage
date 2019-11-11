@@ -6,19 +6,18 @@
 		$url = 'https://programming-quotes-api.herokuapp.com/quotes/lang/en';
 		$json = json_decode(file_get_contents($url));
 
-		$separator = '|';
 		$maxlen = 200;
 		$quotes = array();
-		for($i = 1; $i < count($json); $i++) {
+		for($i = 0; $i < count($json); $i++) {
 			if(strlen($json[$i]->en) <= $maxlen) {
 				array_push($quotes, [$json[$i]->en, $json[$i]->author]);
 			}
 		}
 
 		$file = fopen('./res/quotes.txt', 'w');
-		for($i = 0; $i < count($quotes); $i++) {
-			$s = $quotes[$i][0] . $separator . $quotes[$i][1];
-			fwrite($file, "\n" . $s);
+		fwrite($file, $quotes[0][0] . '|' . $quotes[0][1]);
+		for($i = 1; $i < count($quotes); $i++) {
+			fwrite($file, "\n" . $quotes[$i][0] . '|' . $quotes[$i][1]);
 		}
 		fclose($file);
 	}
@@ -52,8 +51,7 @@
 	}
 
 	function getQuote() {
-		$string = readLines();
-		return [strtok($string, '|'), strtok('|')];
+		return [strtok(readLines(), '|'), strtok('|')];
 	}
 ?>
 <?php
