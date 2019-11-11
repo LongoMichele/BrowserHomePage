@@ -40,3 +40,12 @@ function manageFolder(id) {
 function showForecast() {
 	document.getElementById('forecast').style.display = 'block';
 }
+/*#######################################################################################################################*/
+/*#Programmer Quotes#####################################################################################################*/
+/*#######################################################################################################################*/
+function copyToClipboard() {
+	document.getElementById('quote').innerHTML = 'ettore';
+	var copyText = document.getElementById('quote');
+	copyText.select();
+	document.execCommand('copy');
+}
