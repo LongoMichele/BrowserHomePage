@@ -44,8 +44,9 @@ function showForecast() {
 /*#Programmer Quotes#####################################################################################################*/
 /*#######################################################################################################################*/
 function copyToClipboard() {
-	document.getElementById('quote').innerHTML = 'ettore';
 	var copyText = document.getElementById('quote');
 	copyText.select();
+	copyText.setSelectionRange(0, 99999);
 	document.execCommand('copy');
+	alert('Quote copied.');
 }

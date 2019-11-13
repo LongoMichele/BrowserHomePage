@@ -180,3 +180,6 @@ a.folder:hover {
 	
 	font-size: 20;
 }
+.programmerQuotes b {
+	user-select: text;
+}
