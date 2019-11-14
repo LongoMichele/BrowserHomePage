@@ -101,7 +101,8 @@
 						</li>
 						<li class='link'><a href='https://www.iliad.it/account/'>Iliad</a></li>
 						<li class='link'><a href='https://github.com/'>GitHub</a></li>
-						<li class='last link'><a href='http://localhost:8000/'>localhost:8000</a></li>
+						<li class='link'><a href='http://localhost:8000/'>localhost:8000</a></li>
+						<li class='last link'><a href='https://1337x.to/'>1337x torrents</a></li>
 					</ul>
 				</li>
 				<li id='UniFeFolder' class='folderClosed'><a class='folder' onclick='manageFolder("UniFe")'>UniFe</a>
