@@ -124,7 +124,8 @@
 					</ul>
 				</li>
 				<li class='link'><a href='https://www.youtube.com'>YouTube</a></li>
-				<li class='last link'><a href='https://www.netflix.com/browse'>Netflix</a></li>
+				<li class='link'><a href='https://www.netflix.com/browse'>Netflix</a></li>
+				<li class='last link'><a href='https://www.primevideo.com/region/eu/ref=av_auth_return_redir'>Prime Video</a></li>
 			</ul>
 		</div>
 
