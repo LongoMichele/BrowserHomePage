@@ -124,7 +124,8 @@
 				<li id='RedditFolder' class='folderClosed'><a class='folder' onclick='manageFolder("Reddit")'>Reddit</a>
 					<ul id='Reddit'>
 						<li class='link'><a href='https://www.reddit.com'>reddit.com</a></li>
-						<li class='link'><a href='https://www.reddit.com/r/EpicSeven/'>r/EpicSeven</a></li>
+						<!-- <li class='link'><a href='https://www.reddit.com/r/EpicSeven/'>r/EpicSeven</a></li> -->
+						<li class='link'><a href='https://www.reddit.com/r/CompetitivePokemon/'>Pokemon SwSh</a></li>
 						<li class='last link'><a href='https://www.reddit.com/r/wallpapers/'>r/wallpapers</a></li>
 					</ul>
 				</li>
