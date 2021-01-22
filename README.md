@@ -1,6 +1,5 @@
 # BrowserHomePage
 Custom home page for any browser
-days counter: 4
 
 ###### useful links:
 
