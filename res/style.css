@@ -1,7 +1,9 @@
 :root {
   --bg-color: #303030;
-  --font-color: #dddddd;
-  --font-color-hover: #777777;
+  --font-color-primary: #dddddd;
+  --font-color-secondary: #82a7c7;
+  --font-color-primary-dark: #757575;
+  --font-color-secondary-dark: #57728A;
   --font-size: 2rem;
 }
 
@@ -13,7 +15,7 @@ body {
 
 .page-container {
   background: var(--bg-color);
-  color: var(--font-color);
+  color: var(--font-color-primary);
   font-family: 'Roboto Mono', monospace;
   font-family: 'Space Mono', monospace;
   width: max-content;
@@ -30,8 +32,8 @@ body {
 
 .sub-header {
   font-size: var(--font-size);
+  color: var(--font-color-secondary);
   font-style: italic;
-  filter: brightness(0.5);
   user-select: none;
   text-align: center;
   padding-bottom: 1em;
@@ -70,13 +72,22 @@ li.line-container {
   cursor: pointer;
   text-decoration: none;
   user-select: none;
-  color: var(--font-color);
+  color: var(--font-color-primary);
   display: flex;
 }
 
-.line-text:hover {
+a.line-text {
+  color: var(--font-color-secondary);
+}
+
+span.line-text:hover {
   text-decoration: none;
-  color: var(--font-color-hover);
+  color: var(--font-color-primary-dark);
+}
+
+a.line-text:hover {
+  text-decoration: none;
+  color: var(--font-color-secondary-dark);
 }
 
 .folder::before,
